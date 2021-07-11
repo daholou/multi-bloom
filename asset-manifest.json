@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/multi-bloom/static/css/main.b005bbc0.chunk.css",
+    "main.js": "/multi-bloom/static/js/main.eef915c3.chunk.js",
+    "main.js.map": "/multi-bloom/static/js/main.eef915c3.chunk.js.map",
+    "runtime-main.js": "/multi-bloom/static/js/runtime-main.6d022c83.js",
+    "runtime-main.js.map": "/multi-bloom/static/js/runtime-main.6d022c83.js.map",
+    "static/css/2.4be38407.chunk.css": "/multi-bloom/static/css/2.4be38407.chunk.css",
+    "static/js/2.98045859.chunk.js": "/multi-bloom/static/js/2.98045859.chunk.js",
+    "static/js/2.98045859.chunk.js.map": "/multi-bloom/static/js/2.98045859.chunk.js.map",
+    "static/js/3.0bb401f8.chunk.js": "/multi-bloom/static/js/3.0bb401f8.chunk.js",
+    "static/js/3.0bb401f8.chunk.js.map": "/multi-bloom/static/js/3.0bb401f8.chunk.js.map",
+    "index.html": "/multi-bloom/index.html",
+    "static/css/2.4be38407.chunk.css.map": "/multi-bloom/static/css/2.4be38407.chunk.css.map",
+    "static/css/main.b005bbc0.chunk.css.map": "/multi-bloom/static/css/main.b005bbc0.chunk.css.map",
+    "static/js/2.98045859.chunk.js.LICENSE.txt": "/multi-bloom/static/js/2.98045859.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/multi-bloom/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6d022c83.js",
+    "static/css/2.4be38407.chunk.css",
+    "static/js/2.98045859.chunk.js",
+    "static/css/main.b005bbc0.chunk.css",
+    "static/js/main.eef915c3.chunk.js"
+  ]
+}
