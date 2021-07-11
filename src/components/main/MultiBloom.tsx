@@ -14,11 +14,17 @@ export const MIN_NB_POINTS = 1;
 export const AVG_NB_POINTS = 666;
 export const MAX_NB_POINTS = 10000;
 
+const TXT = {
+  btnStart: "▶ Start",
+  btnStop: "⏸️ Stop",
+  btnReset: "Reset",
+};
+
 export const MultiBloom = () =>
 {
     const [isRunning, setIsRunning] = useState(false);
-    const refCoef = useRef(0);
-    const refRunning = useRef(false);
+    const refCoefficient = useRef(0);
+    const refIsRunning = useRef(false);
 
     const [coefficient, setCoefficient] = useState(MIN_COEFF);
     const [nbPoints, setNbPoints] = useState(AVG_NB_POINTS);
@@ -28,19 +34,19 @@ export const MultiBloom = () =>
     const tick = () =>
     {
         //console.log(`ticking.... ${refCoef.current}`);
-        if(refRunning.current)
+        if(refIsRunning.current)
         {
             requestAnimationFrame(tick);
-            refCoef.current += step;
-            coefficientChangeHandler(refCoef.current);
+            refCoefficient.current += step;
+            coefficientChangeHandler(refCoefficient.current);
         }
     };
 
     const onClickHandler = () =>
     {
-        refRunning.current = !refRunning.current;
-        setIsRunning(refRunning.current);
-        if(refRunning.current)
+        refIsRunning.current = !refIsRunning.current;
+        setIsRunning(refIsRunning.current);
+        if(refIsRunning.current)
         {
             requestAnimationFrame(tick);
         }
@@ -49,20 +55,20 @@ export const MultiBloom = () =>
     const onResetHandler = () =>
     {
         console.log('reset')
-        refRunning.current = false;
+        refIsRunning.current = false;
         setIsRunning(false);
         setStep(AVG_STEP);
         setNbPoints(AVG_NB_POINTS);
     };
 
     const btnVariant = isRunning ? 'outline-danger' : 'outline-success';
-    const btnText = isRunning ? '⏸️ STOP' : '▶️ START';
+    const btnText = isRunning ? TXT.btnStop : TXT.btnStart;
 
     const coefficientChangeHandler = (newCoefficient: number) =>
     {
         const val = toFloat(newCoefficient.toFixed(4));
         const num = isNaN(val) ? MIN_COEFF : Math.max(val, MIN_COEFF);
-        refCoef.current = num;
+        refCoefficient.current = num;
         setCoefficient(num);
         //console.log(num);
     }
@@ -133,7 +139,7 @@ export const MultiBloom = () =>
                                 size={"lg"}
                                 variant={'outline-secondary'}
                                 onClick={onResetHandler}>
-                            RESET
+                            {TXT.btnReset}
                         </Button>
                     </Row>
                 </Col>
@@ -143,7 +149,6 @@ export const MultiBloom = () =>
                             canvasSize={canvasSize}/>
                 </Col>
             </Row>
-
 
         </Container>
     );

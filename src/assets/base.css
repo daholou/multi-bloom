@@ -39,13 +39,13 @@ code {
 }
 
 .left-menu {
-    flex: 0 0 300px;
-    -ms-flex: 0 0 300px;
+    flex: 0 0 260px;
+    -ms-flex: 0 0 260px;
 }
 .item-menu {
     padding: 10px;
     margin: 5px;
-    max-width: 285px;
+    max-width: 245px;
 }
 
 .App {
